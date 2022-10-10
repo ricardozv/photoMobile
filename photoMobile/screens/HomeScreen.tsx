@@ -1,19 +1,22 @@
-import { StyleSheet, Image } from 'react-native';
-import { Text, View } from '../components/Themed';
+import { StyleSheet, Image, View } from 'react-native';
 import { RootTabScreenProps } from '../types';
+import  PinPhoto  from '../components/PinPhoto';
 
 export default function HomeScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <View style={ styles.smallContainer}>
-      <Text style={styles.title}>Not </Text>
-      < Image  source = {{ uri:'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/0.jpeg'}}
-      style = { styles.Image }
-      />
-      </View>
+    <PinPhoto
+      title = {'Beer 01'}
+      image = {'https://imagekank.s3.amazonaws.com/haineken.png'} 
+    />
+    <PinPhoto 
+    title = {'Beer 02'}
+    image = {'https://imagekank.s3.amazonaws.com/magnifica_269ml.png'}
+    />
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +31,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   Image: {
-    width: '100%',
+    width: '30%',
     height: 200, 
     borderRadius: 23
   },
