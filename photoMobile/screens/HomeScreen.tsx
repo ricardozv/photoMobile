@@ -1,19 +1,39 @@
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { RootTabScreenProps } from '../types';
 import  PinPhoto  from '../components/PinPhoto';
 
 export default function HomeScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
-    <View style={styles.container}>
-    <PinPhoto
-      title = {'Beer 01'}
-      image = {'https://imagekank.s3.amazonaws.com/haineken.png'} 
-    />
-    <PinPhoto 
-    title = {'Beer 02'}
-    image = {'https://imagekank.s3.amazonaws.com/magnifica_269ml.png'}
-    />
+    <ScrollView>
+    <View style ={styles.container}>
+      
+      <PinPhoto
+        pinPhoto = {{
+        title:'Beer 01',
+        image:'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg' 
+      }}
+      />
+      <PinPhoto
+        pinPhoto = {{ 
+      title:'Beer 02',
+      image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg'
+      }}
+      />
+      <PinPhoto
+        pinPhoto = {{ 
+      title:'Beer 02',
+      image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg'
+      }}
+      />
+      <PinPhoto
+        pinPhoto = {{ 
+      title:'Beer 02',
+      image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg'
+      }}
+      />
     </View>
+    </ScrollView>
+    
   );
 }
 
